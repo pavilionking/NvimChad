@@ -92,6 +92,34 @@ local default_plugins = {
     end,
   },
 
+  -- {
+  --   "phaazon/hop.nvim",
+  --   branch = 'v2', -- optional but strongly recommended
+  --   init = function()
+  --     require('core.utils').lazy_load 'hop' 
+  --   end,
+  --   config = function()
+  --     dofile(vim.g.base46_cache .. 'hop')
+  --     require('hop').setup( 
+  --       keys = 'etovxqpdygfblzhckisuran',
+  --       quit_key = '<SPC>'
+  --     )
+  --   end
+  -- },
+
+  -- {
+  --   "easymotion/vim-easymotion",
+  --   init = function()
+  --     require('core.utils').lazy_load 'vim-easymotion'
+  --   end,
+  --   opts = function()
+  --     return require "plugins.configs.easymotion"
+  --   end,
+  --   config = function()
+  --     require('vim_easymotion').setup(opts)
+  --   end
+  -- },
+
   -- git stuff
   {
     "lewis6991/gitsigns.nvim",

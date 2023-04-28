@@ -1,5 +1,6 @@
 local opt = vim.opt
 local g = vim.g
+local wo = vim.wo
 local config = require("core.utils").load_config()
 
 -------------------------------------- globals -----------------------------------------
@@ -29,8 +30,14 @@ opt.mouse = "a"
 
 -- Numbers
 opt.number = true
+opt.relativenumber = true
 opt.numberwidth = 2
-opt.ruler = false
+opt.ruler = true
+
+opt.signcolumn = "yes"
+-- 右侧参考线，超过表示代码太长了，考虑换行
+opt.colorcolumn = "100"
+
 
 -- disable nvim intro
 opt.shortmess:append "sI"
@@ -49,7 +56,7 @@ opt.updatetime = 250
 -- when cursor reaches end/beginning of line
 opt.whichwrap:append "<>[]hl"
 
-g.mapleader = " "
+g.mapleader = ","
 
 -- disable some default providers
 for _, provider in ipairs { "node", "perl", "python3", "ruby" } do

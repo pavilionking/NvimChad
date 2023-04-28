@@ -38,6 +38,8 @@ M.capabilities.textDocument.completion.completionItem = {
   },
 }
 
+require'lspconfig'.tsserver.setup {}
+
 require("lspconfig").lua_ls.setup {
   on_attach = M.on_attach,
   capabilities = M.capabilities,
