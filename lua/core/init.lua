@@ -48,6 +48,9 @@ opt.splitright = true
 opt.termguicolors = true
 opt.timeoutlen = 400
 opt.undofile = true
+opt.foldenable = true
+opt.foldmethod = "indent"
+opt.foldlevel = 99
 
 -- interval for writing swap file to disk, also used by gitsigns
 opt.updatetime = 250
@@ -109,6 +112,7 @@ vim.api.nvim_create_autocmd("BufWritePost", {
   end,
 })
 
+require('core.autocmds')
 -------------------------------------- commands ------------------------------------------
 local new_cmd = vim.api.nvim_create_user_command
 

@@ -1,5 +1,7 @@
 local options = {
-  ensure_installed = { "lua-language-server" }, -- not an option from mason.nvim
+  -- mason-lspconfig uses the `lspconfig` server names in the APIs it exposes - not `mason.nvim` package names
+  -- https://github.com/williamboman/mason-lspconfig.nvim/blob/main/doc/server-mapping.md
+  ensure_installed = { "lua-language-server", "emmet_ls", "html"}, -- not an option from mason.nvim
 
   PATH = "skip",
 

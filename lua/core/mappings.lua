@@ -242,6 +242,14 @@ M.lspconfig = {
   },
 }
 
+M.formatter = {
+  plugin = true,
+
+  n = {
+    ["<C-m>"] = { "<cmd> FormatWrite <CR>", "Format" }
+  }
+}
+
 M.nvimtree = {
   plugin = true,
 
@@ -448,6 +456,31 @@ M.gitsigns = {
         require("gitsigns").toggle_deleted()
       end,
       "Toggle deleted",
+    },
+  },
+}
+
+M.hop = {
+  -- plugin = true,
+  
+  n = {
+    ["<leader>s"] = {
+      function()
+        require('hop').hint_patterns()
+      end,
+      "HopPattern"
+    },
+    ["<leader>j"] = {
+      function()
+        require('hop').hint_lines_skip_whitespace()
+      end,
+      "HopLineStart"
+    },
+    ["<leader>k"] = {
+      function()
+        require('hop').hint_words()
+      end,
+      "HopWord"
     },
   },
 }

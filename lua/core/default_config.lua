@@ -11,7 +11,7 @@ M.ui = {
   hl_override = {},
   changed_themes = {},
   theme_toggle = { "onedark", "one_light" },
-  theme = "onedark", -- default theme
+  theme = "monekai", -- default theme
   transparency = false,
   lsp_semantic_tokens = false, -- needs nvim v0.9, just adds highlight groups for lsp semantic tokens
 
@@ -31,7 +31,7 @@ M.ui = {
 
   ------------------------------- nvchad_ui modules -----------------------------
   statusline = {
-    theme = "default", -- default/vscode/vscode_colored/minimal
+    theme = "vscode_colored", -- default/vscode/vscode_colored/minimal
     -- default/round/block/arrow separators work only for default statusline theme
     -- round and block will work for minimal theme only
     separator_style = "default",
@@ -51,24 +51,27 @@ M.ui = {
     load_on_startup = true,
 
     header = {
-      "           ▄ ▄                   ",
-      "       ▄   ▄▄▄     ▄ ▄▄▄ ▄ ▄     ",
-      "       █ ▄ █▄█ ▄▄▄ █ █▄█ █ █     ",
-      "    ▄▄ █▄█▄▄▄█ █▄█▄█▄▄█▄▄█ █     ",
-      "  ▄ █▄▄█ ▄ ▄▄ ▄█ ▄▄▄▄▄▄▄▄▄▄▄▄▄▄  ",
-      "  █▄▄▄▄ ▄▄▄ █ ▄ ▄▄▄ ▄ ▄▄▄ ▄ ▄ █ ▄",
-      "▄ █ █▄█ █▄█ █ █ █▄█ █ █▄█ ▄▄▄ █ █",
-      "█▄█ ▄ █▄▄█▄▄█ █ ▄▄█ █ ▄ █ █▄█▄█ █",
-      "    █▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄█ █▄█▄▄▄█    ",
+  '      ▄▄▄▄▄███████████████████▄▄▄▄▄       ',
+  '    ▄██████████▀▀▀▀▀▀▀▀▀▀██████▀████▄     ',
+  '  ▄██▀████████▄             ▀▀████ ▀██▄   ',
+  ' ▀██▄▄██████████████████▄▄▄         ▄██▀  ',
+  '   ▀█████████████████████████▄    ▄██▀    ',
+  '     ▀████▀▀▀▀▀▀▀▀▀▀▀▀█████████▄▄██▀      ',
+  '       ▀███▄              ▀██████▀        ',
+  '         ▀██████▄         ▄████▀          ',
+  '            ▀█████▄▄▄▄▄▄▄███▀             ',
+  '              ▀████▀▀▀████▀               ',
+  '                ▀███▄███▀                 ',
+  '                   ▀█▀                    ',
     },
 
     buttons = {
-      { "  Find File", "Spc f f", "Telescope find_files" },
-      { "  Recent Files", "Spc f o", "Telescope oldfiles" },
-      { "  Find Word", "Spc f w", "Telescope live_grep" },
-      { "  Bookmarks", "Spc b m", "Telescope marks" },
-      { "  Themes", "Spc t h", "Telescope themes" },
-      { "  Mappings", "Spc c h", "NvCheatsheet" },
+      { "  Find File", "leader f f", "Telescope find_files" },
+      { "  Recent Files", "leader f o", "Telescope oldfiles" },
+      { "  Find Word", "leader f w", "Telescope live_grep" },
+      { "  Bookmarks", "leader b m", "Telescope marks" },
+      { "  Themes", "leader t h", "Telescope themes" },
+      { "  Mappings", "leader c h", "NvCheatsheet" },
     },
   },
 
@@ -83,7 +86,7 @@ M.ui = {
   },
 }
 
-M.plugins = "" -- path i.e "custom.plugins", so make custom/plugins.lua file
+M.plugins = "custom.plugins" -- path i.e "custom.plugins", so make custom/plugins.lua file
 
 M.lazy_nvim = require "plugins.configs.lazy_nvim" -- config for lazy.nvim startup options
 

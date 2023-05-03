@@ -92,33 +92,17 @@ local default_plugins = {
     end,
   },
 
-  -- {
-  --   "phaazon/hop.nvim",
-  --   branch = 'v2', -- optional but strongly recommended
-  --   init = function()
-  --     require('core.utils').lazy_load 'hop' 
-  --   end,
-  --   config = function()
-  --     dofile(vim.g.base46_cache .. 'hop')
-  --     require('hop').setup( 
-  --       keys = 'etovxqpdygfblzhckisuran',
-  --       quit_key = '<SPC>'
-  --     )
-  --   end
-  -- },
-
-  -- {
-  --   "easymotion/vim-easymotion",
-  --   init = function()
-  --     require('core.utils').lazy_load 'vim-easymotion'
-  --   end,
-  --   opts = function()
-  --     return require "plugins.configs.easymotion"
-  --   end,
-  --   config = function()
-  --     require('vim_easymotion').setup(opts)
-  --   end
-  -- },
+  {
+    "phaazon/hop.nvim",
+    branch = 'v2', -- optional but strongly recommended
+    init = function()
+      require('core.utils').load_mappings "hop"
+    end,
+    cmd = { "HopLine", "HopLineStart", "HopWord", "HopPattern", "HopChar1", "HopChar2" }, 
+    config = function()
+      require('hop').setup {keys = "etovxqpdygfblzhckisuranmj"}
+    end
+  },
 
   -- git stuff
   {
@@ -291,6 +275,29 @@ local default_plugins = {
     config = function(_, opts)
       dofile(vim.g.base46_cache .. "whichkey")
       require("which-key").setup(opts)
+    end,
+  },
+
+  -- 自动关闭标签
+  {
+    'windwp/nvim-ts-autotag',
+    event = 'InsertEnter',
+    dependencies = 'hrsh7th/nvim-cmp',
+    opts = {
+      filetypes = { 'javascriptreact', 'typescriptreact', 'html', 'vue', 'tsx', 'jsx' },
+    },
+  },
+
+  -- 格式化
+  {
+    'mhartington/formatter.nvim',
+    event = 'BufWrite',
+    init = function()
+      require("core.utils").load_mappings "formatter"
+    end,
+    cmd = {"Format", "FormatWrite"},
+    config = function()
+      require('plugins.configs.formatter')
     end,
   },
 }
