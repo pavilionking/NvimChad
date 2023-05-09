@@ -18,10 +18,10 @@ M.general = {
   n = {
     ["<Esc>"] = { ":noh <CR>", "clear highlights" },
     -- switch between windows
-    ["<C-h>"] = { "<C-w>h", "window left" },
-    ["<C-l>"] = { "<C-w>l", "window right" },
-    ["<C-j>"] = { "<C-w>j", "window down" },
-    ["<C-k>"] = { "<C-w>k", "window up" },
+    -- ["<A-h>"] = { "<C-w>h", "window left" },
+    -- ["<A-l>"] = { "<C-w>l", "window right" },
+    -- ["<A-j>"] = { "<C-w>j", "window down" },
+    -- ["<A-k>"] = { "<C-w>k", "window up" },
 
     -- save
     ["<C-s>"] = { "<cmd> w <CR>", "save file" },
@@ -246,7 +246,7 @@ M.formatter = {
   plugin = true,
 
   n = {
-    ["<C-m>"] = { "<cmd> FormatWrite <CR>", "Format" }
+    ["<C-m>"] = { "<cmd> Format <CR>", "Format" }
   }
 }
 

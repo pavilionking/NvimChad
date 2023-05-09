@@ -1,10 +1,16 @@
 local present, formatter = pcall(require, 'formatter')
 
+local lspconfig = require'lspconfig'
+local lspconfig_configs = require'lspconfig.configs'
+local lspconfig_util = require 'lspconfig.util'
+
 if present then
   local prettier = function()
+    local path = '~/workspace/infynova/infynova-saas/prettier.config.js'
+    -- local path = '~/workspace/infynova/.prettierrc'
     return {
       exe = 'prettier',
-      args = { '--config /Users/peii/workspace/infynova/.prettierrc', '--stdin-filepath', vim.fn.shellescape(vim.api.nvim_buf_get_name(0)), '--single-quote'},
+      args = { '--config ', path, '--stdin-filepath', vim.fn.shellescape(vim.api.nvim_buf_get_name(0)), '--single-quote'},
       stdin = true,
     }
   end
