@@ -42,7 +42,6 @@ opt.colorcolumn = "100"
 -- disable nvim intro
 opt.shortmess:append "sI"
 
-opt.signcolumn = "yes"
 opt.splitbelow = true
 opt.splitright = true
 opt.termguicolors = true
@@ -60,6 +59,8 @@ opt.updatetime = 250
 opt.whichwrap:append "<>[]hl"
 
 g.mapleader = ","
+g.virtcolumn_char = '▕' -- char to display the line
+g.virtcolumn_priority = 10 -- priority of extmark
 
 -- disable some default providers
 for _, provider in ipairs { "node", "perl", "python3", "ruby" } do

@@ -69,7 +69,7 @@ M.ui = {
       { "  Find File", "leader f f", "Telescope find_files" },
       { "  Recent Files", "leader f o", "Telescope oldfiles" },
       { "  Find Word", "leader f w", "Telescope live_grep" },
-      { "  Bookmarks", "leader b m", "Telescope marks" },
+      -- { "  Bookmarks", "leader b m", "Telescope marks" },
       { "  Themes", "leader t h", "Telescope themes" },
       { "  Mappings", "leader c h", "NvCheatsheet" },
     },
