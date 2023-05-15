@@ -41,6 +41,8 @@ return {
         "compiler",
         "bugreport",
         "ftplugin",
+        "tabnine",
+        -- "copilot"
       },
     },
   },

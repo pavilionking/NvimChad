@@ -17,11 +17,12 @@ M.general = {
 
   n = {
     ["<Esc>"] = { ":noh <CR>", "clear highlights" },
+    ["r"] = { "<cmd> redo <CR>", "redo" },
     -- switch between windows
-    ["<A-h>"] = { "<C-w>h", "window left" },
-    ["<A-l>"] = { "<C-w>l", "window right" },
-    ["<A-j>"] = { "<C-w>j", "window down" },
-    ["<A-k>"] = { "<C-w>k", "window up" },
+    ["<Left>"] = { "<C-w>h", "window left" },
+    ["<Right>"] = { "<C-w>l", "window right" },
+    -- ["<A-j>"] = { "<C-w>j", "window down" },
+    -- ["<A-k>"] = { "<C-w>k", "window up" },
 
     -- save
     ["<C-s>"] = { "<cmd> w <CR>", "save file" },
@@ -70,19 +71,32 @@ M.tabufline = {
 
   n = {
     -- cycle through buffers
-    ["<tab>"] = {
+    -- ["<tab>"] = {
+    --   function()
+    --     require("nvchad_ui.tabufline").tabuflineNext()
+    --   end,
+    --   "goto next buffer",
+    -- },
+    ["<C-o>"] = {
       function()
         require("nvchad_ui.tabufline").tabuflineNext()
       end,
       "goto next buffer",
     },
 
-    ["<S-tab>"] = {
+    ["<C-u>"] = {
       function()
         require("nvchad_ui.tabufline").tabuflinePrev()
       end,
-      "goto prev buffer",
+      "goto next buffer",
     },
+
+    -- ["<S-tab>"] = {
+    --   function()
+    --     require("nvchad_ui.tabufline").tabuflinePrev()
+    --   end,
+    --   "goto prev buffer",
+    -- },
 
     -- close buffer + hide terminal buffer
     ["<leader>x"] = {
@@ -97,8 +111,30 @@ M.tabufline = {
 M.comment = {
   plugin = true,
 
+  i = {
+    ["<C-/>"] = {
+      function()
+        require("Comment.api").toggle.linewise.current()
+      end,
+      "toggle comment",
+    },
+
+    ["<leader>/"] = {
+      function()
+        require("Comment.api").toggle.linewise.current()
+      end,
+      "toggle comment",
+    },
+  },
   -- toggle comment in both modes
   n = {
+    ["<C-/>"] = {
+      function()
+        require("Comment.api").toggle.linewise.current()
+      end,
+      "toggle comment",
+    },
+
     ["<leader>/"] = {
       function()
         require("Comment.api").toggle.linewise.current()
@@ -108,6 +144,10 @@ M.comment = {
   },
 
   v = {
+    ["<C-/>"] = {
+      "<ESC><cmd>lua require('Comment.api').toggle.linewise(vim.fn.visualmode())<CR>",
+      "toggle comment",
+    },
     ["<leader>/"] = {
       "<ESC><cmd>lua require('Comment.api').toggle.linewise(vim.fn.visualmode())<CR>",
       "toggle comment",
@@ -470,19 +510,29 @@ M.hop = {
       end,
       "HopPattern"
     },
-    ["<leader>j"] = {
+    ["<leader>m"] = {
       function()
         require('hop').hint_lines_skip_whitespace()
       end,
       "HopLineStart"
     },
-    ["<leader>k"] = {
+    ["<leader>j"] = {
       function()
         require('hop').hint_words()
       end,
       "HopWord"
     },
   },
+}
+
+M.copilot = {
+  -- i = {
+  --   ["<C-i>"] = { 
+  --     "copilot#Accept('\\<CR>')", 
+  --     "copilot expand", 
+  --     opts = {silent = true, expr = true },
+  --   },
+  -- }
 }
 
 return M

@@ -36,7 +36,7 @@ opt.ruler = true
 
 opt.signcolumn = "yes"
 -- 右侧参考线，超过表示代码太长了，考虑换行
-opt.colorcolumn = "100"
+-- opt.colorcolumn = "100"
 
 
 -- disable nvim intro
@@ -61,6 +61,9 @@ opt.whichwrap:append "<>[]hl"
 g.mapleader = ","
 g.virtcolumn_char = '▕' -- char to display the line
 g.virtcolumn_priority = 10 -- priority of extmark
+g.copilot_assume_mapped = true
+g.copilot_no_tab_map = true
+
 
 -- disable some default providers
 for _, provider in ipairs { "node", "perl", "python3", "ruby" } do
@@ -126,3 +129,5 @@ for i = 1, 9, 1 do
     vim.api.nvim_set_current_buf(vim.t.bufs[i])
   end)
 end
+
+vim.api.nvim_set_keymap('i', '<C-i>', 'copilot#Accept("\\<CR>")', {expr=true, silent=true})
