@@ -16,48 +16,31 @@ autocmd("BufEnter", {
 })
 
 -- 自动切换输入法，需要安装 im-select
--- https://github.com/daipeihust/im-select
 autocmd("InsertLeave", {
   group = myAutoGroup,
   callback = require("core.im-select").macInsertLeave,
 })
+
 autocmd("InsertEnter", {
   group = myAutoGroup,
   callback = require("core.im-select").macInsertEnter,
 })
 
--- 进入Terminal 自动进入插入模式
--- autocmd("TermOpen", {
---   group = myAutoGroup,
---   command = "startinsert",
--- })
-
--- 保存时自动格式化
--- autocmd("BufWritePre", {
---  group = myAutoGroup,
---  pattern = { "*.lua", "*.py", "*.sh" },
---  callback = vim.lsp.buf.formatting_sync,
---})
-
--- 修改lua/plugins.lua 自动更新插件
-autocmd("BufWritePost", {
+-- ruler线
+autocmd("BufReadPost", {
   group = myAutoGroup,
-  -- autocmd BufWritePost plugins.lua source <afile> | PackerSync
   callback = function()
-    if vim.fn.expand("<afile>") == "lua/plugins.lua" then
-      vim.api.nvim_command("source lua/plugins.lua")
-      vim.api.nvim_command("PackerSync")
-    end
-  end,
+    vim.cmd('VirtColumnRefresh') 
+  end
 })
 
 -- Highlight on yank
 autocmd("TextYankPost", {
+  group = myAutoGroup,
+  pattern = "*",
   callback = function()
     vim.highlight.on_yank()
   end,
-  group = myAutoGroup,
-  pattern = "*",
 })
 
 -- 用o换行不要延续注释
@@ -70,4 +53,3 @@ autocmd("BufEnter", {
       + "r" -- But do continue when pressing enter.
   end,
 })
-

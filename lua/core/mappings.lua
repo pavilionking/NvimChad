@@ -46,6 +46,9 @@ M.general = {
     -- new buffer
     ["<leader>b"] = { "<cmd> enew <CR>", "new buffer" },
     ["<leader>ch"] = { "<cmd> NvCheatsheet <CR>", "Mapping cheatsheet" },
+
+    -- copilot start
+    ["<leader>co"] = { "<cmd> Copilot status <CR>", "copilot status" },
   },
 
   t = {
@@ -523,16 +526,6 @@ M.hop = {
       "HopWord"
     },
   },
-}
-
-M.copilot = {
-  -- i = {
-  --   ["<C-i>"] = { 
-  --     "copilot#Accept('\\<CR>')", 
-  --     "copilot expand", 
-  --     opts = {silent = true, expr = true },
-  --   },
-  -- }
 }
 
 return M
