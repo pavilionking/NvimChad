@@ -8,6 +8,13 @@ M.general = {
     -- new buffer
     ["<leader>n"] = { "<cmd> enew <CR>", "new buffer" },
 
+    ["<leader>kw"] = { 
+      function()
+        require("nvchad_ui.tabufline").closeAllBufs()
+      end,
+      "close all buffer" 
+    },
+
     -- copilot start
     ["<leader>b"] = { "<cmd> Copilot status <CR>", "copilot status" },
   },
