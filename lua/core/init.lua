@@ -36,7 +36,6 @@ opt.ruler = true
 
 opt.signcolumn = "yes"
 -- 右侧参考线，超过表示代码太长了，考虑换行
--- opt.colorcolumn = "100"
 
 
 -- disable nvim intro

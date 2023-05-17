@@ -84,7 +84,7 @@ M.tabufline = {
       "goto next buffer",
     },
 
-    ["<C-u>"] = {
+    ["<C-y>"] = {
       function()
         require("nvchad_ui.tabufline").tabuflinePrev()
       end,
