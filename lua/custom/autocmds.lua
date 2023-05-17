@@ -18,12 +18,12 @@ autocmd("BufEnter", {
 -- 自动切换输入法，需要安装 im-select
 autocmd("InsertLeave", {
   group = myAutoGroup,
-  callback = require("core.im-select").macInsertLeave,
+  callback = require("custom.im-select").macInsertLeave,
 })
 
 autocmd("InsertEnter", {
   group = myAutoGroup,
-  callback = require("core.im-select").macInsertEnter,
+  callback = require("custom.im-select").macInsertEnter,
 })
 
 -- ruler线

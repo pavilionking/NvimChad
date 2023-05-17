@@ -116,7 +116,6 @@ vim.api.nvim_create_autocmd("BufWritePost", {
   end,
 })
 
-require('core.autocmds')
 -------------------------------------- commands ------------------------------------------
 local new_cmd = vim.api.nvim_create_user_command
 
@@ -130,4 +129,3 @@ for i = 1, 9, 1 do
   end)
 end
 
-vim.api.nvim_set_keymap('i', '<C-i>', 'copilot#Accept("\\<CR>")', {expr=true, silent=true})

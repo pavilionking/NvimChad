@@ -46,9 +46,6 @@ M.general = {
     -- new buffer
     ["<leader>b"] = { "<cmd> enew <CR>", "new buffer" },
     ["<leader>ch"] = { "<cmd> NvCheatsheet <CR>", "Mapping cheatsheet" },
-
-    -- copilot start
-    ["<leader>co"] = { "<cmd> Copilot status <CR>", "copilot status" },
   },
 
   t = {
@@ -499,31 +496,6 @@ M.gitsigns = {
         require("gitsigns").toggle_deleted()
       end,
       "Toggle deleted",
-    },
-  },
-}
-
-M.hop = {
-  -- plugin = true,
-  
-  n = {
-    ["<leader>s"] = {
-      function()
-        require('hop').hint_patterns()
-      end,
-      "HopPattern"
-    },
-    ["<leader>m"] = {
-      function()
-        require('hop').hint_lines_skip_whitespace()
-      end,
-      "HopLineStart"
-    },
-    ["<leader>j"] = {
-      function()
-        require('hop').hint_words()
-      end,
-      "HopWord"
     },
   },
 }
