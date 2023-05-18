@@ -77,16 +77,17 @@ M.tabufline = {
     --   end,
     --   "goto next buffer",
     -- },
-    ["<C-o>"] = {
+
+    ["<C-,>"] = {
       function()
-        require("nvchad_ui.tabufline").tabuflineNext()
+        require("nvchad_ui.tabufline").tabuflinePrev()
       end,
       "goto next buffer",
     },
 
-    ["<C-y>"] = {
+    ["<C-.>"] = {
       function()
-        require("nvchad_ui.tabufline").tabuflinePrev()
+        require("nvchad_ui.tabufline").tabuflineNext()
       end,
       "goto next buffer",
     },
@@ -119,12 +120,12 @@ M.comment = {
       "toggle comment",
     },
 
-    ["<leader>/"] = {
-      function()
-        require("Comment.api").toggle.linewise.current()
-      end,
-      "toggle comment",
-    },
+    -- ["<leader>/"] = {
+    --   function()
+    --     require("Comment.api").toggle.linewise.current()
+    --   end,
+    --   "toggle comment",
+    -- },
   },
   -- toggle comment in both modes
   n = {

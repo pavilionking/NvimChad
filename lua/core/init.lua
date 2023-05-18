@@ -63,7 +63,6 @@ g.virtcolumn_priority = 10 -- priority of extmark
 g.copilot_assume_mapped = true
 g.copilot_no_tab_map = true
 
-
 -- disable some default providers
 for _, provider in ipairs { "node", "perl", "python3", "ruby" } do
   vim.g["loaded_" .. provider .. "_provider"] = 0

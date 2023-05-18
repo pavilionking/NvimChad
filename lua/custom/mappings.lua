@@ -40,6 +40,14 @@ M.hop = {
       end,
       "HopWord"
     },
+    ["<leader>l"] = {
+      function()
+        require('hop').hint_words({
+          hint_position = require'hop.hint'.HintPosition.END
+        })
+      end,
+      "HopWordEnd"
+    },
   },
 }
 

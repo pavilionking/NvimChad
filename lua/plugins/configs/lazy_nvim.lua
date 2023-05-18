@@ -43,6 +43,7 @@ return {
         "ftplugin",
         "tabnine",
         -- "copilot"
+        "nvterm",
       },
     },
   },

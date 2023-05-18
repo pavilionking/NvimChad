@@ -98,9 +98,11 @@ local default_plugins = {
     init = function()
       require('core.utils').load_mappings "hop"
     end,
-    cmd = { "HopLine", "HopLineStart", "HopWord", "HopPattern", "HopChar1", "HopChar2" }, 
+    cmd = { "HopLine", "HopLineStart", "HopWord", "HopPattern", "HopChar1", "HopChar2", "HopAnywhere" }, 
     config = function()
-      require('hop').setup {keys = "etovxqpdygfblzhckisuranmj"}
+      require('hop').setup {
+        keys = "etovxqpdygfblzhckisuranmj", 
+      }
     end
   },
 
