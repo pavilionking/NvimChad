@@ -47,21 +47,6 @@ local plugins = {
     end,
   },
 
-  { 
-    'codota/tabnine-nvim', 
-    build = "./dl_binaries.sh",
-    config = function()
-      require('tabnine').setup {
-        disable_auto_comment=true,
-        accept_keymap="<Tab>",
-        dismiss_keymap = "<C-]>",
-        debounce_ms = 200,
-        suggestion_color = {gui = "#808080", cterm = 244},
-        exclude_filetypes = {"TelescopePrompt"},
-        log_file_path = nil, -- absolute path to Tabnine log file
-      } 
-    end
-  },
   {
     'github/copilot.vim',
     cmd = { "Copilot" },
@@ -75,7 +60,24 @@ local plugins = {
     config = function()
       require("virt-column").setup(overrides.virt)
     end,
-  }
+  },
+  {
+    'folke/todo-comments.nvim',
+    dependencies = 'nvim-lua/plenary.nvim',
+    config = function() 
+      require('todo-comments').setup()
+    end,
+  },
+  {
+    "kylechui/nvim-surround",
+    version = "*", -- Use for stability; omit to use `main` branch for the latest features
+    event = "VeryLazy",
+    config = function()
+        require("nvim-surround").setup({
+            -- Configuration here, or leave empty to use defaults
+        })
+    end
+}
   -- To make a plugin not be loaded
   -- {
   --   "NvChad/nvim-colorizer.lua",

@@ -8,7 +8,7 @@ M.general = {
     -- new buffer
     ["<leader>n"] = { "<cmd> enew <CR>", "new buffer" },
 
-    ["<leader>kw"] = { 
+    ["<leader>aw"] = { 
       function()
         require("nvchad_ui.tabufline").closeAllBufs()
       end,
@@ -30,10 +30,20 @@ M.hop = {
     },
     ["<leader>j"] = {
       function()
-        require('hop').hint_lines_skip_whitespace()
+        require('hop').hint_lines_skip_whitespace({
+          -- direction = require'hop.hint'.HintDirection.AFTER_CURSOR,
+        })
       end,
       "HopLineStart"
     },
+    -- ["<leader>k"] = {
+    --   function()
+    --     require('hop').hint_lines_skip_whitespace({
+    --       direction = require'hop.hint'.HintDirection.BEFORE_CURSOR,
+    --     })
+    --   end,
+    --   "HopLineStart"
+    -- },
     ["<leader>m"] = {
       function()
         require('hop').hint_words()

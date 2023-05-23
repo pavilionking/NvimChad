@@ -12,10 +12,10 @@ local servers = {
   "tsserver", 
 
   -- vue3
-  "volar", 
+  -- "volar", 
 
   -- vue2
-  -- "vuels", 
+  "vuels", 
   "clangd",
   -- "cssmodules_ls",
   -- "emmet_ls",
