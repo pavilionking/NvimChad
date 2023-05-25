@@ -77,7 +77,14 @@ local plugins = {
             -- Configuration here, or leave empty to use defaults
         })
     end
-}
+  },
+  {
+    'lewis6991/satellite.nvim',
+    cmd = { "SatelliteRefresh", "SatelliteEnable", "SatelliteDisable" },
+    config = function()
+      require('satellite').setup()
+    end
+  }
   -- To make a plugin not be loaded
   -- {
   --   "NvChad/nvim-colorizer.lua",

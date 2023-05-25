@@ -31,6 +31,7 @@ autocmd("BufReadPost", {
   group = myAutoGroup,
   callback = function()
     vim.cmd('VirtColumnRefresh') 
+    vim.cmd('SatelliteEnable') 
   end
 })
 
