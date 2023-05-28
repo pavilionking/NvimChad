@@ -34,7 +34,6 @@ local options = {
     -- 'ruby',
     -- 'rust',
     'sql',
-    -- 'yaml',
   },
 
   sync_install = false,

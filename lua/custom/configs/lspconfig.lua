@@ -10,12 +10,10 @@ local servers = {
   "jsonls",
   -- "eslint",
   "tsserver", 
-
   -- vue3
-  -- "volar", 
-
+  "volar", 
   -- vue2
-  "vuels", 
+  -- "vuels", 
   "clangd",
   -- "cssmodules_ls",
   -- "emmet_ls",

@@ -78,6 +78,18 @@ local plugins = {
         })
     end
   },
+  -- 格式化
+  {
+    'mhartington/formatter.nvim',
+    event = 'BufWrite',
+    init = function()
+      require("core.utils").load_mappings "formatter"
+    end,
+    cmd = {"Format", "FormatWrite"},
+    config = function()
+      require('custom.configs.formatter')
+    end,
+  },
   {
     'lewis6991/satellite.nvim',
     cmd = { "SatelliteRefresh", "SatelliteEnable", "SatelliteDisable" },

@@ -5,9 +5,14 @@ local lspconfig_configs = require'lspconfig.configs'
 local lspconfig_util = require 'lspconfig.util'
 
 if present then
+
   local prettier = function()
+    -- saas 2.0
     local path = '~/workspace/infynova/infynova-saas/prettier.config.js'
+
+    -- normal
     -- local path = '~/workspace/infynova/.prettierrc'
+
     return {
       exe = 'prettier',
       args = { '--config ', path, '--stdin-filepath', vim.fn.shellescape(vim.api.nvim_buf_get_name(0)), '--single-quote'},

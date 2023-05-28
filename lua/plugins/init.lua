@@ -290,18 +290,6 @@ local default_plugins = {
     },
   },
 
-  -- 格式化
-  {
-    'mhartington/formatter.nvim',
-    event = 'BufWrite',
-    init = function()
-      require("core.utils").load_mappings "formatter"
-    end,
-    cmd = {"Format", "FormatWrite"},
-    config = function()
-      require('plugins.configs.formatter')
-    end,
-  },
 }
 
 local config = require("core.utils").load_config()
