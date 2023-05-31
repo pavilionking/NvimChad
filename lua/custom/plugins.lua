@@ -91,17 +91,11 @@ local plugins = {
     end,
   },
   {
-    'lewis6991/satellite.nvim',
-    cmd = { "SatelliteRefresh", "SatelliteEnable", "SatelliteDisable" },
+    'kensyo/nvim-scrlbkun',
     config = function()
-      require('satellite').setup()
+      require('scrlbkun').setup()
     end
   }
-  -- To make a plugin not be loaded
-  -- {
-  --   "NvChad/nvim-colorizer.lua",
-  --   enabled = false
-  -- },
 
 }
 

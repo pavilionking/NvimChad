@@ -31,7 +31,7 @@ autocmd("BufReadPost", {
   group = myAutoGroup,
   callback = function()
     vim.cmd('VirtColumnRefresh') 
-    vim.cmd('SatelliteEnable') 
+    require('scrlbkun.components').enable_all()
   end
 })
 
