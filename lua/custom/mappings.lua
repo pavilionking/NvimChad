@@ -6,7 +6,7 @@ M.general = {
     [";"] = { ":", "enter command mode", opts = { nowait = true } },
 
     -- new buffer
-    ["<leader>n"] = { "<cmd> enew <CR>", "new buffer" },
+    ["<C-n>"] = { "<cmd> enew <CR>", "new buffer" },
 
     ["<leader>aw"] = { 
       function()
@@ -16,7 +16,7 @@ M.general = {
     },
 
     -- copilot start
-    ["<leader>b"] = { "<cmd> Copilot status <CR>", "copilot status" },
+    ["<leader>cp"] = { "<cmd> Copilot status <CR>", "copilot status" },
   },
 }
 
