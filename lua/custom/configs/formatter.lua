@@ -8,10 +8,10 @@ if present then
 
   local prettier = function()
     -- saas 2.0
-    local path = '~/workspace/infynova/infynova-saas/prettier.config.js'
+    -- local path = '~/workspace/infynova/infynova-saas/prettier.config.js'
 
     -- normal
-    -- local path = '~/workspace/infynova/.prettierrc'
+    local path = '~/workspace/infynova/.prettierrc'
 
     return {
       exe = 'prettier',

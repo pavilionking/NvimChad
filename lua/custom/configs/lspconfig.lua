@@ -10,13 +10,13 @@ local servers = {
   "jsonls",
   -- "eslint",
   "tsserver", 
-  -- vue3
-  "volar", 
-  -- vue2
-  -- "vuels", 
   "clangd",
   -- "cssmodules_ls",
   -- "emmet_ls",
+ 
+  -- "volar",  -- vue3
+  
+  "vuels", -- vue2
 }
 
 for _, lsp in ipairs( servers ) do
