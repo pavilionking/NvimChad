@@ -112,6 +112,12 @@ M.comment = {
       end,
       "toggle comment",
     },
+    ["<D-/>"] = {
+      function()
+        require("Comment.api").toggle.linewise.current()
+      end,
+      "toggle comment",
+    },
 
     -- ["<leader>/"] = {
     --   function()
@@ -128,6 +134,12 @@ M.comment = {
       end,
       "toggle comment",
     },
+    ["<D-/>"] = {
+      function()
+        require("Comment.api").toggle.linewise.current()
+      end,
+      "toggle comment",
+    },
 
     ["<leader>/"] = {
       function()
@@ -139,6 +151,10 @@ M.comment = {
 
   v = {
     ["<C-/>"] = {
+      "<ESC><cmd>lua require('Comment.api').toggle.linewise(vim.fn.visualmode())<CR>",
+      "toggle comment",
+    },
+    ["<D-/>"] = {
       "<ESC><cmd>lua require('Comment.api').toggle.linewise(vim.fn.visualmode())<CR>",
       "toggle comment",
     },
@@ -293,6 +309,7 @@ M.nvimtree = {
 
     -- focus
     ["<leader>e"] = { "<cmd> NvimTreeFocus <CR>", "focus nvimtree" },
+    ["<D-e>"] = { "<cmd> NvimTreeCollapse <CR>", "collapse nvimtree" },
   },
 }
 

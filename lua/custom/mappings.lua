@@ -8,7 +8,7 @@ M.general = {
     -- new buffer
     ["<C-n>"] = { "<cmd> enew <CR>", "new buffer" },
 
-    ["<C-x>"] = { 
+    ["<D-x>"] = { 
       function()
         require("nvchad_ui.tabufline").closeAllBufs()
       end,
