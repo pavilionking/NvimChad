@@ -15,9 +15,9 @@ local servers = {
   -- "emmet_ls",
   -- "tailwindcss",
  
-  -- "volar",  -- vue3
+  "volar",  -- vue3
   
-  "vuels", -- vue2
+  -- "vuels", -- vue2
 }
 
 for _, lsp in ipairs( servers ) do

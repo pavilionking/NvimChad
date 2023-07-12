@@ -21,8 +21,8 @@ M.general = {
     -- switch between windows
     ["<Left>"] = { "<C-w>h", "window left" },
     ["<Right>"] = { "<C-w>l", "window right" },
-    -- ["<A-j>"] = { "<C-w>j", "window down" },
-    -- ["<A-k>"] = { "<C-w>k", "window up" },
+    ["<C-m>"] = { "<C-w>j", "window down" },
+    ["<C-y>"] = { "<C-w>k", "window up" },
 
     -- save
     ["<C-s>"] = { "<cmd> w <CR>", "save file" },

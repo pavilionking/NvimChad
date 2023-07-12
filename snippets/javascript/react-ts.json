@@ -28,5 +28,29 @@
       ")"
     ],
     "description": "creates a react context"
-  }
+  },
+  "react native style": {
+		"prefix": "gg",
+		"body": "style={g(styles, '$1')}"
+	},
+	"react native styles": {
+		"prefix": "ga",
+		"body": "style={[g(styles, '$1'), $2]}"
+	},
+	"react native view": {
+		"prefix": "vv",
+		"body": "<View>$1</View>"
+	},
+	"react native view styles": {
+		"prefix": "v",
+		"body": "<View style={g(styles, '$1')}>$2</View>"
+	},
+	"react native text": {
+		"prefix": "t",
+		"body": "<Text style={g(styles, '$1')}>$2</Text>"
+	},
+	"react native image": {
+		"prefix": "i",
+		"body": "<Image style={g(styles, '$1')} source={$2}/>"
+	}
 }
