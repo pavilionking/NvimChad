@@ -44,6 +44,7 @@ return {
         "tabnine",
         -- "copilot"
         "nvterm",
+        "todo-comment",
         -- "satellite",
         -- "scrlbkun",
       },
