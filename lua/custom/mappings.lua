@@ -48,7 +48,7 @@ M.hop = {
       end,
       "HopWord"
     },
-    ["<leader>k"] = {
+    ["<leader>l"] = {
       function()
         require('hop').hint_words({
           hint_position = require'hop.hint'.HintPosition.END
@@ -59,6 +59,11 @@ M.hop = {
   },
 }
 
-
+M.diffview = {
+  n = {
+    ["<leader>go"] = { "<cmd> DiffviewOpen <CR>", "git diff open" },
+    ["<leader>gc"] = { "<cmd> DiffviewClose <CR>", "git diff close" },
+  }
+}
 
 return M

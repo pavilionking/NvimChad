@@ -308,5 +308,17 @@
       "</style>"
     ],
     "description": "Base for Vue File with Class based Typescript format"
-  }
+  },
+  "I18n-html": {
+		"prefix": "ht",
+		"body": [
+			"{{ $t(`$1`) }}$2"
+		]
+	},
+	"I18n-js": {
+		"prefix": "jt",
+		"body": [
+			"t(`$1`)$2"
+		]
+	}
 }

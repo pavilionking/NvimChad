@@ -95,6 +95,18 @@ local plugins = {
     config = function()
       require('scrlbkun').setup()
     end
+  },
+  {
+    'sindrets/diffview.nvim',
+    init = function()
+      require('core.utils').load_mappings "diffview"
+    end,
+    cmd = {
+      "DiffviewOpen", "DiffviewClose", "DiffviewToggleFiles", "DiffviewFocusFiles", "DiffviewRefresh"
+    },
+    config = function()
+      require('diffview').setup()
+    end
   }
 
 }

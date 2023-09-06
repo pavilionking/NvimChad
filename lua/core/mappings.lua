@@ -84,6 +84,12 @@ M.tabufline = {
       end,
       "goto next buffer",
     },
+    ["<D-[>"] = {
+      function()
+        require("nvchad_ui.tabufline").tabuflinePrev()
+      end,
+      "goto next buffer",
+    },
 
     ["<C-.>"] = {
       function()
@@ -91,7 +97,12 @@ M.tabufline = {
       end,
       "goto next buffer",
     },
-
+    ["<D-]>"] = {
+      function()
+        require("nvchad_ui.tabufline").tabuflineNext()
+      end,
+      "goto next buffer",
+    },
     -- close buffer + hide terminal buffer
     ["<leader>x"] = {
       function()
@@ -320,7 +331,7 @@ M.telescope = {
     -- find
     ["<leader>ff"] = { "<cmd> Telescope find_files <CR>", "find files" },
     ["<leader>fa"] = { "<cmd> Telescope find_files follow=true no_ignore=true hidden=true <CR>", "find all" },
-    ["<leader>fw"] = { "<cmd> Telescope live_grep <CR>", "live grep" },
+    ["<leader>fw"] = { "<cmd> Telescope live_grep search_dirs=. <CR>", "live grep" },
     ["<leader>fb"] = { "<cmd> Telescope buffers <CR>", "find buffers" },
     ["<leader>fh"] = { "<cmd> Telescope help_tags <CR>", "help page" },
     ["<leader>fo"] = { "<cmd> Telescope oldfiles <CR>", "find oldfiles" },
