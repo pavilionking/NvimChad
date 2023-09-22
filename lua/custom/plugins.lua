@@ -108,8 +108,17 @@ local plugins = {
     config = function()
       require('diffview').setup()
     end
+  },
+  {
+    'simrat39/symbols-outline.nvim',
+    init = function()
+      require("core.utils").load_mappings "SymbolsOutline"
+    end,
+    cmd = { 'SymbolsOutline' },
+    config = function() 
+      require('symbols-outline').setup()
+    end
   }
-
 }
 
 return plugins

@@ -11,19 +11,12 @@ if present then
     -- local path = '~/workspace/infynova/infynova-saas/prettier.config.js'
 
     -- normal
-    local path = '~/workspace/infynova/.prettierrc'
+    -- local path = '~/workspace/infynova/.prettierrc'
 
     return {
       exe = 'prettier',
       args = { '--config ', path, '--stdin-filepath', vim.fn.shellescape(vim.api.nvim_buf_get_name(0)), '--single-quote'},
-      -- args = {
-      --   '--config-precedence',
-      --   'prefer-file',
-      --   '--print-width',
-      --   vim.bo.textwidth,
-      --   '--stdin-filepath',
-      --   vim.fn.shellescape(vim.api.nvim_buf_get_name(0)),
-      -- },
+      args = { '--config-precedence', 'prefer-file', '--stdin-filepath', vim.fn.shellescape(vim.api.nvim_buf_get_name(0)), },
       stdin = true,
     }
   end

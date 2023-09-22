@@ -23,6 +23,8 @@ M.general = {
 
     -- copilot start
     ["<leader>cp"] = { "<cmd> Copilot status <CR>", "copilot status" },
+
+    ["<leader>tt"] = { "<cmd> TodoTelescope <CR>", "Todo Telescope" }
   },
 }
 
@@ -42,13 +44,21 @@ M.hop = {
       end,
       "HopLineStart"
     },
+    ["<leader>l"] = {
+      function()
+        require('hop').hint_lines({
+          -- direction = require'hop.hint'.HintDirection.AFTER_CURSOR,
+        })
+      end,
+      "HopLine"
+    },
     ["<leader>m"] = {
       function()
         require('hop').hint_words()
       end,
       "HopWord"
     },
-    ["<leader>l"] = {
+    ["<leader>k"] = {
       function()
         require('hop').hint_words({
           hint_position = require'hop.hint'.HintPosition.END
@@ -63,6 +73,12 @@ M.diffview = {
   n = {
     ["<leader>go"] = { "<cmd> DiffviewOpen <CR>", "git diff open" },
     ["<leader>gc"] = { "<cmd> DiffviewClose <CR>", "git diff close" },
+  }
+}
+
+M.SymbolsOutline = {
+  n = {
+    ["<C-m>"] = { "<cmd> SymbolsOutline <CR>", "SymbolsOutline Toggle" }
   }
 }
 

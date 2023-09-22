@@ -12,25 +12,27 @@ local sources = {
   b.formatting.deno_fmt, -- choosed deno for ts/js files cuz its very fast!
   b.formatting.prettier.with {
     filetypes = { 
-        "html", 
-        "markdown", 
-        "css", 
-        "javascript",
-        "javascriptreact",
-        "typescript",
-        "typescriptreact",
-        "vue",
-        "scss",
-        "less",
-        "json",
-        "yaml",
-        "graphql", 
-      }
-      -- prefer_local = "node_modules/.bin",
-    }, -- so prettier works only on these filetypes
+      "html", 
+      "markdown", 
+      "css", 
+      "javascript",
+      "javascriptreact",
+      "typescript",
+      "typescriptreact",
+      "vue",
+      "scss",
+      "less",
+      "json",
+      "yaml",
+      "graphql", 
+      "xml",
+      "svg"
+    }
+    -- prefer_local = "node_modules/.bin",
+  }, -- so prettier works only on these filetypes
 
   -- Lua
-  -- b.formatting.stylua,
+  b.formatting.stylua,
 
   -- cpp
   -- b.formatting.clang_format,
