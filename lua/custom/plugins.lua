@@ -66,7 +66,8 @@ local plugins = {
     dependencies = 'nvim-lua/plenary.nvim',
     lazy = false,
     config = function() 
-      require('todo-comments').setup()
+      local opt = require('custom.configs.todo-comment')
+      require('todo-comments').setup(opt)
     end,
   },
   {
@@ -116,7 +117,7 @@ local plugins = {
     end,
     cmd = { 'SymbolsOutline' },
     config = function() 
-      require('symbols-outline').setup()
+      require('symbols-outline').setup(overrides.SymbolsOutline)
     end
   }
 }

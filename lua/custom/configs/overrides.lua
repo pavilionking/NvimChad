@@ -55,4 +55,8 @@ M.virt = {
   virtcolumn = '100'
 }
 
+M.SymbolsOutline = {
+  autofold_depth = 2,
+}
+
 return M
