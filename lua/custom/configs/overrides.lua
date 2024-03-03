@@ -41,6 +41,10 @@ M.nvimtree = {
     enable = true,
   },
 
+  view = {
+    width = 45,
+  },
+
   renderer = {
     highlight_git = true,
     icons = {

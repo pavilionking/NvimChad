@@ -56,7 +56,6 @@ local plugins = {
   },
   {
     'lukas-reineke/virt-column.nvim',
-    cmd = { "VirtColumnRefresh" },
     config = function()
       require("virt-column").setup(overrides.virt)
     end,

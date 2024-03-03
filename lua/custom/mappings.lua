@@ -10,13 +10,13 @@ M.general = {
 
     ["<D-x>"] = { 
       function()
-        require("nvchad_ui.tabufline").closeAllBufs()
+        require("nvchad.tabufline").closeAllBufs()
       end,
       "close all buffer" 
     },
     ["<leader>cx"] = { 
       function()
-        require("nvchad_ui.tabufline").closeAllBufs()
+        require("nvchad.tabufline").closeAllBufs()
       end,
       "close all buffer" 
     },

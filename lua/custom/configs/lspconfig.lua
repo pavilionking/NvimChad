@@ -10,6 +10,7 @@ local servers = {
   "jsonls",
   -- "eslint",
   "tsserver", 
+  "prismals",
   -- "clangd",
   -- "cssmodules_ls",
   -- "emmet_ls",

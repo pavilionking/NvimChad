@@ -29,7 +29,7 @@ M.ui = {
 
   telescope = { style = "borderless" }, -- borderless / bordered
 
-  ------------------------------- nvchad_ui modules -----------------------------
+  ------------------------------- nvchad ui modules -----------------------------
   statusline = {
     theme = "vscode_colored", -- default/vscode/vscode_colored/minimal
     -- default/round/block/arrow separators work only for default statusline theme
@@ -104,6 +104,6 @@ M.plugins = "custom.plugins" -- path i.e "custom.plugins", so make custom/plugin
 
 M.lazy_nvim = require "plugins.configs.lazy_nvim" -- config for lazy.nvim startup options
 
-M.mappings = {}
+M.mappings = require "core.mappings"
 
 return M

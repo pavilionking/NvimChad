@@ -73,40 +73,40 @@ M.tabufline = {
     -- cycle through buffers
     -- ["<tab>"] = {
     --   function()
-    --     require("nvchad_ui.tabufline").tabuflineNext()
+    --     require("nvchad.tabufline").tabuflineNext()
     --   end,
     --   "goto next buffer",
     -- },
 
     ["<C-,>"] = {
       function()
-        require("nvchad_ui.tabufline").tabuflinePrev()
+        require("nvchad.tabufline").tabuflinePrev()
       end,
       "goto next buffer",
     },
     ["<D-[>"] = {
       function()
-        require("nvchad_ui.tabufline").tabuflinePrev()
+        require("nvchad.tabufline").tabuflinePrev()
       end,
       "goto next buffer",
     },
 
     ["<C-.>"] = {
       function()
-        require("nvchad_ui.tabufline").tabuflineNext()
+        require("nvchad.tabufline").tabuflineNext()
       end,
       "goto next buffer",
     },
     ["<D-]>"] = {
       function()
-        require("nvchad_ui.tabufline").tabuflineNext()
+        require("nvchad.tabufline").tabuflineNext()
       end,
       "goto next buffer",
     },
     -- close buffer + hide terminal buffer
     ["<leader>x"] = {
       function()
-        require("nvchad_ui.tabufline").close_buffer()
+        require("nvchad.tabufline").close_buffer()
       end,
       "close buffer",
     },
@@ -226,7 +226,7 @@ M.lspconfig = {
 
     ["<leader>ra"] = {
       function()
-        require("nvchad_ui.renamer").open()
+        require("nvchad.renamer").open()
       end,
       "lsp rename",
     },
@@ -336,6 +336,12 @@ M.telescope = {
     ["<leader>fh"] = { "<cmd> Telescope help_tags <CR>", "help page" },
     ["<leader>fo"] = { "<cmd> Telescope oldfiles <CR>", "find oldfiles" },
     ["<leader>fz"] = { "<cmd> Telescope current_buffer_fuzzy_find <CR>", "find in current buffer" },
+    ["<D-f>"] = { 
+      function()
+        require("telescope.builtin").current_buffer_fuzzy_find({ sorter = require('telescope.sorters').get_substr_matcher({})})
+      end, 
+      "find in current buffer" 
+    },
 
     -- git
     ["<leader>cm"] = { "<cmd> Telescope git_commits <CR>", "git commits" },

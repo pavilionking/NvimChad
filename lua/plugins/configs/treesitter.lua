@@ -34,6 +34,7 @@ local options = {
     -- 'ruby',
     -- 'rust',
     'sql',
+    'prisma',
   },
 
   sync_install = false,

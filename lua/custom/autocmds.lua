@@ -30,7 +30,6 @@ autocmd("InsertEnter", {
 autocmd("BufReadPost", {
   group = myAutoGroup,
   callback = function()
-    vim.cmd('VirtColumnRefresh') 
     require('scrlbkun.components').enable_all()
   end
 })
