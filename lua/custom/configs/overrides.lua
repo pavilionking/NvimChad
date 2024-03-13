@@ -2,10 +2,14 @@ local M = {}
 
 M.treesitter = {
   ensure_installed = {
-    "markdown",
-    "markdown_inline",
+    'markdown',
+    'markdown_inline',
     'yaml',
-    -- 'java',
+    'prisma',
+    -- 'dockerfile',
+    -- 'regex',
+    -- 'ruby',
+    -- 'rust',
   },
   indent = {
     enable = true,

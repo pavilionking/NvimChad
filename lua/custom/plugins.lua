@@ -54,8 +54,23 @@ local plugins = {
       -- require('copilot-vim').setup()
     end,
   },
+
+  {
+    "Exafunction/codeium.nvim",
+    dependencies = {
+      "nvim-lua/plenary.nvim",
+      "hrsh7th/nvim-cmp",
+    },
+    cmd = { "Codeium" },
+    config = function()
+      require("codeium").setup()
+    end
+  },
+
   {
     'lukas-reineke/virt-column.nvim',
+    tag = "v1.5.6",
+    cmd = { "VirtColumnRefresh" },
     config = function()
       require("virt-column").setup(overrides.virt)
     end,
@@ -118,7 +133,7 @@ local plugins = {
     config = function() 
       require('symbols-outline').setup(overrides.SymbolsOutline)
     end
-  }
+  },
 }
 
 return plugins

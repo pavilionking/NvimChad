@@ -47,6 +47,7 @@ return {
         "todo-comment",
         -- "satellite",
         -- "scrlbkun",
+        "copilot",
       },
     },
   },

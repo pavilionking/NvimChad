@@ -15,7 +15,7 @@ local formatting_style = {
   fields = field_arrangement[cmp_style] or { "abbr", "kind", "menu" },
 
   format = function(_, item)
-    local icons = require("nvchad.icons").lspkind
+    local icons = require "nvchad.icons.lspkind"
     local icon = (cmp_ui.icons and icons[item.kind]) or ""
 
     if cmp_style == "atom" or cmp_style == "atom_colored" then
@@ -110,6 +110,7 @@ local options = {
     { name = "buffer" },
     { name = "nvim_lua" },
     { name = "path" },
+    { name = "codeium" },
   },
 }
 

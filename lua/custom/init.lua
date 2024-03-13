@@ -7,4 +7,4 @@
 -- })
 require('custom.autocmds')
 
-vim.api.nvim_set_keymap('i', '<C-i>', 'copilot#Accept("\\<CR>")', {expr=true, silent=true})
+-- vim.api.nvim_set_keymap('i', '<C-i>', 'copilot#Accept("\\<CR>")', {expr=true, silent=true})
