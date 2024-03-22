@@ -203,21 +203,21 @@ M.lspconfig = {
       "lsp hover",
     },
 
-    ["gi"] = {
+    ["gy"] = {
       function()
         vim.lsp.buf.implementation()
       end,
       "lsp implementation",
     },
 
-    ["<leader>ls"] = {
+    ["gs"] = {
       function()
         vim.lsp.buf.signature_help()
       end,
       "lsp signature_help",
     },
 
-    ["<leader>D"] = {
+    ["gt"] = {
       function()
         vim.lsp.buf.type_definition()
       end,

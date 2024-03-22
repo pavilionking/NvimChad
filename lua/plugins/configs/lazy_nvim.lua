@@ -42,7 +42,6 @@ return {
         "bugreport",
         "ftplugin",
         "tabnine",
-        -- "copilot"
         "nvterm",
         "todo-comment",
         -- "satellite",

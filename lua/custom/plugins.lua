@@ -47,13 +47,13 @@ local plugins = {
     end,
   },
 
-  {
-    'github/copilot.vim',
-    cmd = { "Copilot" },
-    config = function()
-      -- require('copilot-vim').setup()
-    end,
-  },
+  -- {
+  --   'github/copilot.vim',
+  --   cmd = { "Copilot" },
+  --   config = function()
+  --     -- require('copilot-vim').setup()
+  --   end,
+  -- },
 
   {
     "Exafunction/codeium.nvim",
