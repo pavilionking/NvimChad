@@ -22,7 +22,7 @@ M.general = {
     },
 
     -- copilot start
-    ["<leader>cp"] = { "<cmd> Copilot status <CR>", "copilot status" },
+    -- ["<leader>cp"] = { "<cmd> Copilot status <CR>", "copilot status" },
 
     ["<leader>tt"] = { "<cmd> TodoTelescope <CR>", "Todo Telescope" }
   },
@@ -79,6 +79,27 @@ M.diffview = {
 M.SymbolsOutline = {
   n = {
     ["<C-m>"] = { "<cmd> SymbolsOutline <CR>", "SymbolsOutline Toggle" }
+  }
+}
+
+M.codeium = {
+  n = {
+    ["<leader>ce"] = { "<cmd> Codeium Enable <CR>", "codeium enable" },
+    ["<leader>cs"] = { "<cmd> Codeium Disable <CR>", "codeium disenable" },
+  },
+  i = {
+    ["<C-i>"] = {
+      function() vim.fn['codeium#Accept']() end, "Codeium Accept", { expr = true, silent = true },
+    },
+    ["<C-y>"] = {
+      function() vim.fn['codeium#CycleCompletions'](-1) end, "Codeium Previous", { expr = true, silent = true },
+    },
+    ["<C-p>"] = {
+      function() vim.fn['codeium#CycleCompletions'](1) end, "Codeium Next", { expr = true, silent = true },
+    },
+    ["<C-c>"] = {
+      function() vim.fn['codeium#Clear']() end, "Codeium Next", { expr = true, silent = true },
+    },
   }
 }
 

@@ -11,7 +11,7 @@ local servers = {
   "jsonls",
   -- "eslint",
   -- "tsserver", 
-  "prismals",
+  -- "prismals",
   -- "clangd",
   -- "cssmodules_ls",
   -- "emmet_ls",
@@ -36,7 +36,7 @@ lspconfig.tsserver.setup({
     "typescript",
     "typescriptreact",
     "javascript",
-    "javascriptreact",
+    "javascript",
     "vue",
   },
   init_options = {

@@ -54,17 +54,9 @@ local plugins = {
   --     -- require('copilot-vim').setup()
   --   end,
   -- },
-
   {
-    "Exafunction/codeium.nvim",
-    dependencies = {
-      "nvim-lua/plenary.nvim",
-      "hrsh7th/nvim-cmp",
-    },
-    cmd = { "Codeium" },
-    config = function()
-      require("codeium").setup()
-    end
+    'Exafunction/codeium.vim',
+     event = 'BufEnter'
   },
 
   {

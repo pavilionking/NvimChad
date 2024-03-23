@@ -79,7 +79,7 @@ local options = {
       behavior = cmp.ConfirmBehavior.Replace,
       select = false,
     },
-    ["<Tab>"] = cmp.mapping(function(fallback)
+    ["<C-j>"] = cmp.mapping(function(fallback)
       if cmp.visible() then
         cmp.select_next_item()
       elseif require("luasnip").expand_or_jumpable() then
@@ -91,7 +91,7 @@ local options = {
       "i",
       "s",
     }),
-    ["<S-Tab>"] = cmp.mapping(function(fallback)
+    ["<C-k>"] = cmp.mapping(function(fallback)
       if cmp.visible() then
         cmp.select_prev_item()
       elseif require("luasnip").jumpable(-1) then
@@ -110,7 +110,7 @@ local options = {
     { name = "buffer" },
     { name = "nvim_lua" },
     { name = "path" },
-    { name = "codeium" },
+    -- { name = "codeium" },
   },
 }
 
