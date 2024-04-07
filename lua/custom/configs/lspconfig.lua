@@ -17,8 +17,8 @@ local servers = {
   -- "emmet_ls",
   -- "tailwindcss",
  
-  "volar",  -- vue3
-  -- "vuels", -- vue2
+  -- "volar",  -- vue3
+  "vuels", -- vue2
 }
 
 for _, lsp in ipairs( servers ) do
@@ -28,46 +28,22 @@ for _, lsp in ipairs( servers ) do
    }
 end
 
-lspconfig.tsserver.setup({
-  on_init = on_init,
-  on_attach = on_attach,
-  capabilities = capabilities,
-  filetypes = {
-    "typescript",
-    "typescriptreact",
-    "javascript",
-    "javascript",
-    "vue",
-  },
-  init_options = {
-    plugins = {
-      {
-        name = "@vue/typescript-plugin",
-        location = "/usr/local/lib/node_modules/@vue/typescript-plugin",
-        languages = { "javascript", "typescript", "vue" },
-      },
-    },
-    typescript = {
-      serverPath = "/usr/local/lib/node_modules/typescript/bin/tsserver",
-      tsdk = "/usr/local/lib/node_modules/typescript/lib",
-    },
-  },
-})
+require "custom.configs.lspconfig-tsplugin"
 
---[[ lspconfig.volar.setup({
-  init_options = {
-    typescript = {
-      serverPath = "/usr/local/lib/node_modules/typescript/bin/tsserver",
-      tsdk = "/usr/local/lib/node_modules/typescript/lib",
-    },
-  },
-  capabilities = capabilities,
-  on_init = on_init,
-  on_attach = on_attach,
-  filetypes = {
-    "vue",
-  },
-}) ]]
+-- lspconfig.volar.setup({
+--   init_options = {
+--     typescript = {
+--       serverPath = "/usr/local/lib/node_modules/typescript/bin/tsserver",
+--       tsdk = "/usr/local/lib/node_modules/typescript/lib",
+--     },
+--   },
+--   capabilities = capabilities,
+--   on_init = on_init,
+--   on_attach = on_attach,
+--   filetypes = {
+--     "vue",
+--   },
+-- })
 
 -- lspconfig.pyright.setup { blabla}
 

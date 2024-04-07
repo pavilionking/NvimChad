@@ -11,7 +11,7 @@ if present then
     -- local path = '~/workspace/infynova/infynova-saas/prettier.config.js'
 
     -- normal
-    -- local path = '~/workspace/infynova/.prettierrc'
+    local path = '~/workspace/infynova/.prettierrc'
 
     return {
       exe = 'prettier',

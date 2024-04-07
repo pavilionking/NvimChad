@@ -82,7 +82,7 @@ M.SymbolsOutline = {
   }
 }
 
-M.codeium = {
+--[[ M.codeium = {
   n = {
     ["<leader>ce"] = { "<cmd> Codeium Enable <CR>", "codeium enable" },
     ["<leader>cs"] = { "<cmd> Codeium Disable <CR>", "codeium disenable" },
@@ -101,6 +101,6 @@ M.codeium = {
       function() vim.fn['codeium#Clear']() end, "Codeium Next", { expr = true, silent = true },
     },
   }
-}
+} ]]
 
 return M

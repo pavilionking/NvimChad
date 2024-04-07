@@ -54,10 +54,10 @@ local plugins = {
   --     -- require('copilot-vim').setup()
   --   end,
   -- },
-  {
-    'Exafunction/codeium.vim',
-     event = 'BufEnter'
-  },
+  -- {
+  --   'Exafunction/codeium.vim',
+  --    event = 'BufEnter'
+  -- },
 
   {
     'lukas-reineke/virt-column.nvim',

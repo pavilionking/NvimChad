@@ -47,6 +47,7 @@ return {
         -- "satellite",
         -- "scrlbkun",
         "copilot",
+        "codeium",
       },
     },
   },
