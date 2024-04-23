@@ -4,7 +4,7 @@ local capabilities = require( "plugins.configs.lspconfig" ).capabilities
 local lspconfig = require "lspconfig"
 
 lspconfig.tsserver.setup({
-  -- on_init = on_init,
+  on_init = on_init,
   on_attach = on_attach,
   capabilities = capabilities,
   filetypes = {
@@ -12,7 +12,7 @@ lspconfig.tsserver.setup({
     "typescriptreact",
     "javascript",
     "javascript",
-    -- "vue",
+    "vue",
   },
   init_options = {
     plugins = {

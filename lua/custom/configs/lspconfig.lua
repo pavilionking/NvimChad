@@ -10,16 +10,19 @@ local servers = {
   "cssls", 
   "jsonls",
   -- "eslint",
-  -- "tsserver", 
   -- "prismals",
   -- "clangd",
   -- "cssmodules_ls",
-  -- "emmet_ls",
-  -- "tailwindcss",
+  "emmet_ls",
+  "tailwindcss",
  
-  -- "volar",  -- vue3
-  "vuels", -- vue2
+  -- "volar",  -- vue3 (deprecated)
+
+  -- "tsserver", 
+  -- "vuels", -- vue2
 }
+-- vue3和ts (volar 2.0)
+require "custom.configs.lspconfig-tsplugin"
 
 for _, lsp in ipairs( servers ) do
   lspconfig[lsp].setup {
@@ -27,23 +30,6 @@ for _, lsp in ipairs( servers ) do
     capabilities = capabilities,
    }
 end
-
-require "custom.configs.lspconfig-tsplugin"
-
--- lspconfig.volar.setup({
---   init_options = {
---     typescript = {
---       serverPath = "/usr/local/lib/node_modules/typescript/bin/tsserver",
---       tsdk = "/usr/local/lib/node_modules/typescript/lib",
---     },
---   },
---   capabilities = capabilities,
---   on_init = on_init,
---   on_attach = on_attach,
---   filetypes = {
---     "vue",
---   },
--- })
 
 -- lspconfig.pyright.setup { blabla}
 
