@@ -1,0 +1,1 @@
+{"title":"Change up_arrow key to right_shift","rules":[{"description":"Change up_arrow to right_shift if pressed with others","manipulators":[{"type":"basic","from":{"key_code":"up_arrow","modifiers":{"optional":["any"]}},"to":[{"key_code":"right_shift"}],"to_if_alone":[{"key_code":"up_arrow","hold_down_milliseconds":100}]}]}]}
