@@ -8,6 +8,7 @@ g.nvchad_theme = config.ui.theme
 g.base46_cache = vim.fn.stdpath "data" .. "/nvchad/base46/"
 g.toggle_theme_icon = "   "
 g.transparency = config.ui.transparency
+-- g.codeium_no_map_tab = 1
 
 -------------------------------------- options ------------------------------------------
 opt.laststatus = 3 -- global statusline
