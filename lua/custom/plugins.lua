@@ -144,6 +144,37 @@ local plugins = {
       --   If not available, we use `mini` as the fallback
       "rcarriga/nvim-notify",
       }
+  },
+  {
+    "roobert/search-replace.nvim",
+    lazy = true,
+    init = function()
+      require('core.utils').load_mappings("SearchReplace")
+    end,
+    cmd = {
+      "SearchReplaceSingleBufferVisualSelection",
+      "SearchReplaceWithinVisualSelection",
+      "SearchReplaceWithinVisualSelectionCWord",
+      "SearchReplaceSingleBufferSelections",
+      "SearchReplaceSingleBufferOpen",
+      "SearchReplaceSingleBufferCWord",
+      "SearchReplaceSingleBufferCWORD",
+      "SearchReplaceSingleBufferCExpr",
+      "SearchReplaceSingleBufferCFile",
+      "SearchReplaceMultiBufferSelections",
+      "SearchReplaceMultiBufferOpen",
+      "SearchReplaceMultiBufferCWord",
+      "SearchReplaceMultiBufferCWORD",
+      "SearchReplaceMultiBufferCExpr",
+      "SearchReplaceMultiBufferCFile",
+    },
+    config = function()
+      require("search-replace").setup({
+        -- optionally override defaults
+        default_replace_single_buffer_options = "gcI",
+        default_replace_multi_buffer_options = "egcI",
+      })
+    end,
   }
 }
 

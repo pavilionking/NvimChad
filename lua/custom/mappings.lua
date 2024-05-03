@@ -103,4 +103,15 @@ M.codeium = {
   }
 }
 
+M.SearchReplace = {
+  n = {
+    ["<leader>ro"] = {"<cmd> SearchReplaceSingleBufferOpen <CR>", "SearchReplace [o]pen"},
+    ["<leader>rs"] = {"<cmd> SearchReplaceSingleBufferSelections <CR>", "SearchReplace [s]elction list"},
+    ["<leader>rw"] = {"<cmd> SearchReplaceSingleBufferCWord <CR>", "SearchReplace [w]ord"},
+    ["<leader>rW"] = {"<cmd> SearchReplaceSingleBufferOpen <CR>", "SearchReplace [W]ORD"},
+    ["<leader>re"] = {"<cmd> SearchReplaceSingleBufferCExpr <CR>", "SearchReplace [e]xpr"},
+    ["<leader>rf"] = {"<cmd> SearchReplaceSingleBufferCFile <CR>", "SearchReplace [f]ile"},
+  }
+}
+
 return M
