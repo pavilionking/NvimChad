@@ -46,7 +46,6 @@ local plugins = {
       require("better_escape").setup()
     end,
   },
-
   -- {
   --   'github/copilot.vim',
   --   cmd = { "Copilot" },
@@ -54,12 +53,37 @@ local plugins = {
   --     -- require('copilot-vim').setup()
   --   end,
   -- },
-  -- {
-  --   'Exafunction/codeium.vim',
-  --   tag = '1.6.36',
-  --    event = 'BufEnter',
-  -- },
-
+  --[[ {
+    "Exafunction/codeium.nvim",
+    dependencies = {
+      "nvim-lua/plenary.nvim",
+      "hrsh7th/nvim-cmp",
+    },
+    cmd = { "Codeium" },
+    config = function()
+      require("codeium").setup()
+    end
+  }, ]]
+  --[[ {
+    'Exafunction/codeium.vim',
+    tag = '1.6.36',
+    event = 'BufEnter',
+    init = function()
+      require("core.utils").load_mappings "codeium"
+    end,
+  }, ]]
+  {
+    'luozhiya/fittencode.nvim',
+    event = "VeryLazy",
+    config = function()
+      require('fittencode').setup({
+        completion_mode ='inline'
+      })
+    end,
+    init = function()
+      require("core.utils").load_mappings "fittencode"
+    end,
+  },
   {
     'lukas-reineke/virt-column.nvim',
     tag = "v1.5.6",

@@ -6,8 +6,8 @@ local util = require 'lspconfig.util'
 
 -- if you just want default config for the servers then put them in a table
 local servers = {
-  "html", 
-  "cssls", 
+  "html",
+  "cssls",
   "jsonls",
   -- "eslint",
   -- "prismals",

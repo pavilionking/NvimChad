@@ -82,24 +82,50 @@ M.SymbolsOutline = {
   }
 }
 
-M.codeium = {
+-- M.codeium = {
+--   n = {
+--     ["<leader>ce"] = { "<cmd> Codeium Enable <CR>", "codeium enable" },
+--     ["<leader>cs"] = { "<cmd> Codeium Disable <CR>", "codeium disenable" },
+--   },
+--   i = {
+--     ["<C-i>"] = {
+--       function() vim.fn['codeium#Accept']() end, "Codeium Accept", { expr = true, silent = true },
+--     },
+--     ["<C-y>"] = {
+--       function() vim.fn['codeium#CycleCompletions'](-1) end, "Codeium Previous", { expr = true, silent = true },
+--     },
+--     ["<C-p>"] = {
+--       function() vim.fn['codeium#CycleCompletions'](1) end, "Codeium Next", { expr = true, silent = true },
+--     },
+--     ["<C-x>"] = {
+--       function() vim.fn['codeium#Clear']() end, "Codeium clear", { expr = true, silent = true },
+--     },
+--   }
+-- }
+
+M.fittencode = {
   n = {
-    ["<leader>ce"] = { "<cmd> Codeium Enable <CR>", "codeium enable" },
-    ["<leader>cs"] = { "<cmd> Codeium Disable <CR>", "codeium disenable" },
+    ["<leader>fc"] = {
+      function() require('fittencode').toggle_chat() end, "Fittencode toggle", { expr = true, silent = true }
+    },
   },
   i = {
-    ["<C-i>"] = {
-      function() vim.fn['codeium#Accept']() end, "Codeium Accept", { expr = true, silent = true },
+    ["<C-c>"] = {
+      function() require('fittencode').dismiss_suggestions() end, "Fittencode dismiss suggestions ", { expr = true, silent = true },
     },
     ["<C-y>"] = {
-      function() vim.fn['codeium#CycleCompletions'](-1) end, "Codeium Previous", { expr = true, silent = true },
+      function() require('fittencode').revoke_line() end, "Fittencode accept line", { expr = true, silent = true },
     },
     ["<C-p>"] = {
-      function() vim.fn['codeium#CycleCompletions'](1) end, "Codeium Next", { expr = true, silent = true },
+      function() require('fittencode').accept_line() end, "Fittencode accept line", { expr = true, silent = true },
     },
-    ["<C-c>"] = {
-      function() vim.fn['codeium#Clear']() end, "Codeium Next", { expr = true, silent = true },
-    },
+  }
+}
+
+M.noice = {
+  n = {
+    ['<leader>nh'] = { function() require('noice').cmd('history') end, 'message history' },
+    ['<leader>nl'] = { function() require('noice').cmd('last') end, 'message last' },
   }
 }
 
