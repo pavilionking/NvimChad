@@ -1,4 +1,5 @@
 local overrides = require("custom.configs.overrides")
+local fitten = require("custom.configs.fitten")
 
 ---@type NvPluginSpec[]
 local plugins = {
@@ -76,9 +77,7 @@ local plugins = {
     'luozhiya/fittencode.nvim',
     event = "VeryLazy",
     config = function()
-      require('fittencode').setup({
-        completion_mode ='inline'
-      })
+      require('fittencode').setup(fitten)
     end,
     init = function()
       require("core.utils").load_mappings "fittencode"
