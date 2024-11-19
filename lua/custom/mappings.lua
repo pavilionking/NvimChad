@@ -8,6 +8,19 @@ M.general = {
     -- new buffer
     ["<C-n>"] = { "<cmd> enew <CR>", "new buffer" },
 
+    ["H"] = { 
+      function()
+        require("nvchad.tabufline").tabuflinePrev()
+      end,
+      "new buffer"
+    },
+    ["L"] = { 
+      function()
+        require("nvchad.tabufline").tabuflineNext()
+      end,
+      "new buffer"
+    },
+
     ["<D-x>"] = { 
       function()
         require("nvchad.tabufline").closeAllBufs()
@@ -29,6 +42,7 @@ M.general = {
 }
 
 M.hop = {
+  plugin = true,
   n = {
     ["<leader>s"] = {
       function()
